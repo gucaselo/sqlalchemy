@@ -37,8 +37,9 @@ def Home():
         f"/api/v1.0/precipitation<br/>"
         f"/api/v1.0/stations<br/>"
         f"/api/v1.0/tobs<br/>"
-        f"/api/v1.0/<start></br>"
-        f"/api/v1.0/<start>/<end></br>"
+        f"Replace start_date and end_date for dates in YYYYMMDD format:</br>"
+        f"/api/v1.0/start_date</br>"
+        f"/api/v1.0/start_date/end_date</br>"
     )
 
 @app.route("/api/v1.0/precipitation")
