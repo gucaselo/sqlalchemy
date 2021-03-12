@@ -3,10 +3,12 @@ import numpy as np
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
-from sqlalchemy import create_engine, func
+from sqlalchemy import create_engine, func, desc
 import datetime as dt
 from datetime import datetime
 from flask import Flask, jsonify
+
+
 
 # create engine to hawaii.sqlite
 database_path = 'Resources/hawaii.sqlite'
@@ -82,9 +84,10 @@ def tobs():
     session=Session(engine)
 
     # Query to obtain Temperatures information and most recent date
+    active_station = session.query(Measurement.station).order_by(desc(func.count(Measurement.station))).group_by(Measurement.station).first()
     recent_date = session.query(Measurement.date).order_by(Measurement.date.desc()).first()
     year_ago = dt.date(2017,8,23) - dt.timedelta(days=365)
-    tobs_year = session.query(Measurement.date, Measurement.tobs).filter(Measurement.date >= year_ago).order_by(Measurement.date.desc()).all()
+    tobs_year = session.query(Measurement.date, Measurement.tobs).filter(Measurement.date >= year_ago).filter(Measurement.station == active_station[0]).order_by(Measurement.date.desc()).all()
     session.close()
     
     # Add data obtained into a list
