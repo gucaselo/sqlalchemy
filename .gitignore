@@ -2,7 +2,6 @@
 __pycache__/
 *.py[cod]
 *$py.class
-bonus/temp_analysis_bonus_2_starter.ipynb
 
 # C extensions
 *.so
