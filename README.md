@@ -16,3 +16,31 @@ Performed the following queries to obtain more detail information about the data
 * Histogram Plot with the temperature observations in the last 12 months.
 
 <img src="plots/station_tobs.png" alt="Station TOBS"/>
+
+#### Climate App
+Designed a `Flask` API based on previous developed queries. Used Flask `jsonify` to convert the API data into a valid JSON response object.
+
+For this app several routes where created:
+
+* `/`
+
+  * Home page.
+
+  * List all routes that are available.
+
+* `/api/v1.0/precipitation`
+
+  * Return a JSON representation of the precipitation values from the dataset.
+
+* `/api/v1.0/stations`
+
+  * Return a JSON list of stations from the dataset.
+
+* `/api/v1.0/tobs`
+
+  * Return a JSON list of temperature observations (TOBS) for the previous year.
+
+* `/api/v1.0/<start>` and `/api/v1.0/<start>/<end>`
+
+  * Return a JSON list of the minimum, average and max temperature for a given start or start-end range date.
+
