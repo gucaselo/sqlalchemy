@@ -48,6 +48,9 @@ For this app several routes where created:
 ### Temperature Analysis
 
 #### Temperature Analysis II
+Performed a t-test using the Hawaii temperatures from the dataset for the Months of June and December and determined that the difference in the means are statistically significant.
+
+#### Temperature Analysis II
 Created a user function called `calc_temps` that taking a date range as an argument would return the minimum, average and maximum temperatures for that range of dates.
 Bar Chart with Y error was plotted using the Avg temperature as the bar Y value and the difference of Max and Min temperature as y error bar (YERR).
 
