@@ -44,3 +44,12 @@ For this app several routes where created:
 
   * Return a JSON list of the minimum, average and max temperature for a given start or start-end range date.
 
+
+### Temperature Analysis
+
+#### Temperature Analysis II
+Created a user function called `calc_temps` that taking a date range as an argument would return the minimum, average and maximum temperatures for that range of dates.
+Bar Chart with Y error was plotted using the Avg temperature as the bar Y value and the difference of Max and Min temperature as y error bar (YERR).
+
+<img src="plots/bar_plot" alt="Bar Plot with YERR"/>
+
