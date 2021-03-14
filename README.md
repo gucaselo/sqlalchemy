@@ -63,4 +63,4 @@ The following task were performed in this analysis:
 * Created a user function called `daily_normals` that taking a date range as an argument would return a DataFrame of the min, avg and max temperatures based on the month and day only. 
 * A beautiful area plot was generated to show the findings.
 
-<img src="plots/are_plot.png" alt="TOBS Area Plot"/>
+<img src="plots/area_plot.png" alt="TOBS Area Plot"/>
