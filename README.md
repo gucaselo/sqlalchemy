@@ -56,3 +56,11 @@ Bar Chart with Y error was plotted using the Avg temperature as the bar Y value 
 
 <img src="plots/bar_plot" alt="Bar Plot with YERR"/>
 
+##### Daily Rainfall Average
+The following task were performed in this analysis:
+
+* Calculated the total precipitation data for a specific date range from a previous year to be used as historical data for a trip that is planed on current year.
+* Created a user function called `daily_normals` that taking a date range as an argument would return a DataFrame of the min, avg and max temperatures based on the month and day only. 
+* A beautiful area plot was generated to show the findings.
+
+<img src="plots/are_plot" alt="TOBS Area Plot"/>
