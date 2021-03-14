@@ -145,7 +145,7 @@ def temperatures2(start, end):
     temp_results = session.query(func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)).filter(Measurement.date.between(start_date, end_date)).all()
     session.close()
 
-    # Add data obtained into a list
+    # Add data obtained into a list 
     temp_info = []
     for tmin, tavg, tmax in temp_results:
         temp_dict = {}
